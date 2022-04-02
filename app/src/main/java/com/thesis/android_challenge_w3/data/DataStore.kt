@@ -1,7 +1,8 @@
 package com.thesis.android_challenge_w3.data
 
 import com.thesis.android_challenge_w3.model.User
-
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 class DataStore private constructor() {
     private val userList = ArrayList<User>()
     private lateinit var loginCallback: LoginCallback
@@ -20,6 +21,8 @@ class DataStore private constructor() {
     fun signUp(fullName: String, email: String, password: String) {
         if (fullName.isEmpty() || email.isEmpty() || password.isEmpty()) {
             signUpCallback.onFailed("Field cannot empty")
+        } else if (isInvalidEmail(email) || isInvalidPassword(password)){
+            signUpCallback.onFailed("Email or password is in wrong format")
         } else {
             for (user in userList) {
                 if (user.email == email) {
@@ -30,11 +33,8 @@ class DataStore private constructor() {
             val user = User(fullName, email, password)
             userList.add(user)
             signUpCallback.onSucceed()
-
-
         }
     }
-
     fun login(email: String, password: String) {
         for (user in userList) {
             if (user.email == email && user.password == password) {
@@ -71,7 +71,18 @@ class DataStore private constructor() {
             }
         }
     }
+    private fun isInvalidEmail(email: String): Boolean {
+        val matcher: Matcher = Pattern.compile("[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" + "\\@gmail.com").matcher(email)
+        return !matcher.matches()
+    }
 
+    private fun isInvalidPassword(password: String): Boolean{
+        val matcher: Matcher =
+            Pattern.compile("((?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#\$%^&*()]).{8,})").matcher(
+                password
+            )
+        return !matcher.matches()
+    }
     fun setSignUpCallback(signUpCallback: SignUpCallback) {
         this.signUpCallback = signUpCallback
     }

@@ -14,6 +14,8 @@ import com.thesis.android_challenge_w3.activity.profile.ProfileActivity
 import com.thesis.android_challenge_w3.activity.signup.SignUpActivity
 import com.thesis.android_challenge_w3.databinding.ActivitySignInBinding
 import com.thesis.android_challenge_w3.model.User
+import com.thesis.android_challenge_w3.activity.restaurant_list.RestaurantListActivity
+
 
 class SignInActivity : AppCompatActivity() {
 
@@ -50,13 +52,21 @@ class SignInActivity : AppCompatActivity() {
 
         }
 
+//        viewModel.isSignInSucceed.observe(this, Observer { user ->
+//            user?.let {
+//                showToastMessage("Sign in Successful")
+//                startProfileActivity(user)
+//            }
+//
+//        })
         viewModel.isSignInSucceed.observe(this, Observer { user ->
             user?.let {
                 showToastMessage("Sign in Successful")
-                startProfileActivity(user)
+                startRestaurantListActivity()
             }
 
         })
+
 
         viewModel.errorMessage.observe(this, Observer { message ->
             message?.let {
@@ -71,6 +81,10 @@ class SignInActivity : AppCompatActivity() {
         bundle.putParcelable(USER_KEY, user)
         val intent = Intent(this@SignInActivity, ProfileActivity::class.java)
         intent.putExtras(bundle)
+        startActivity(intent)
+    }
+    private fun startRestaurantListActivity() {
+        val intent = Intent(this@SignInActivity, RestaurantListActivity::class.java)
         startActivity(intent)
     }
 
