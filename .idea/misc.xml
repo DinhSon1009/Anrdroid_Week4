@@ -17,8 +17,20 @@
         <entry key="..\:/AndroidWeek3/Android-Challenge-W3/app/src/main/res/layout/activity_sign_up.xml" value="0.21979166666666666" />
         <entry key="..\:/AndroidWeek3/Android-Challenge-W3/app/src/main/res/layout/activity_welcome.xml" value="0.21979166666666666" />
         <entry key="..\:/AndroidWeek3/Android-Challenge-W3/app/src/main/res/layout/dialog_edit_info.xml" value="0.21979166666666666" />
-        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_restaurant_list.xml" value="0.358695652173913" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/drawable/ic_arrow_forward_24.xml" value="0.2965" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/drawable/ic_grid.xml" value="0.2965" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2965" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2965" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/drawable/ic_linear.xml" value="0.2965" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/drawable/rounded_button.xml" value="0.2965" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/drawable/splash_screen.xml" value="0.2965" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_onboarding_three.xml" value="0.358695652173913" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_onboarding_two.xml" value="0.358695652173913" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_profile.xml" value="0.358695652173913" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_restaurant_list.xml" value="0.25" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_sign_in.xml" value="0.358695652173913" />
         <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
+        <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/activity_welcome.xml" value="0.358695652173913" />
         <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/dialog_edit_info.xml" value="0.358695652173913" />
         <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/item_grid_restaurant.xml" value="0.358695652173913" />
         <entry key="..\:/Android_Week4/Android_Week4/app/src/main/res/layout/item_linear_restaurant.xml" value="0.358695652173913" />
